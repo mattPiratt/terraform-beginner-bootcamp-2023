@@ -1,5 +1,7 @@
 # Terraform Beginner Bootcamp 2023
 
+A preparation week
+
 ## Resources
 
 - [Gitpod tasks](https://www.gitpod.io/docs/configure/workspaces/tasks)
