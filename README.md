@@ -23,6 +23,12 @@ terraform apply
 
 There are also [terraform modules ](https://registry.terraform.io/browse/modules)
 
+After adding additional provider, we need to run 
+`terraform init -upgrade`
+
+We can destroy/delete whatever was previously created by
+`terraform destroy`
+
 
 ## Resources
 
