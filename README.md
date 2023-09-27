@@ -29,6 +29,20 @@ After adding additional provider, we need to run
 We can destroy/delete whatever was previously created by
 `terraform destroy`
 
+Instruction how to migrate this infra to cloud: 
+https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate
+
+To connect to Terraform Cloud, we need to place token into
+`open /home/gitpod/.terraform.d/credentials.tfrc.json`
+
+and then 
+`terraform login`
+
+Variables for Terraform cloud should be set in the Workspace:
+https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1/variables
+
+And the deployed resources can be seen here:
+https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1
 
 ## Resources
 

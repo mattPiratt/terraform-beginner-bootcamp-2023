@@ -1,4 +1,18 @@
+variable "AWS_DEFAULT_REGION" {
+}
+variable "AWS_SECRET_ACCESS_KEY" {
+}
+variable "AWS_ACCESS_KEY_ID" {
+}
+
 terraform {
+  cloud {
+    organization = "qbeckmansion"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
+
   required_providers {
     random = {
       source = "hashicorp/random"
