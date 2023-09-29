@@ -24,6 +24,12 @@ tasks:
       cd $THEIA_WORKSPACE_ROOT
     command: |
       aws sts get-caller-identity
+  - name: npm-http-server
+    before: |
+      npm install -g npm@10.1.0
+      npm i http-server -g
+    command: |
+      http-server
 vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode
