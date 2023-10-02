@@ -13,6 +13,7 @@ tasks:
         sudo tee /etc/apt/sources.list.d/hashicorp.list
       sudo apt update
       sudo apt-get install terraform
+      cp $GITPOD_REPO_ROOT/terraform.tfvars.example $GITPOD_REPO_ROOT/terraform.tfvars
       source ./bin/generate-gitpod-tfcloud-credentials
   - name: aws-cli
     env:

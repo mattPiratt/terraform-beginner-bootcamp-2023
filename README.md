@@ -44,6 +44,10 @@ https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1/variables
 And the deployed resources can be seen here:
 https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1
 
+Terraform has variables. Can be declared in variables.tf. Can be ovverriten by 
+`terraform -var name="value"`
+
+
 ## Moving html file into S3 bucket by CLI
 
 `aws s3 cp public/index.html s3://bartosz-tfc-bootcamp/index.html`
