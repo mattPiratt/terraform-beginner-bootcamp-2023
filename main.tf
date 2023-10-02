@@ -4,8 +4,8 @@ resource "random_string" "bucket_name" {
   upper = false
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = random_string.bucket_name.id
+resource "aws_s3_bucket" "website_bucket" {
+  bucket = var.BUCKET_NAME
 
   tags = {
     UserUuid = var.USER_UUID
