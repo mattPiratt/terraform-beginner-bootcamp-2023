@@ -44,6 +44,10 @@ https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1/variables
 And the deployed resources can be seen here:
 https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1
 
+## Moving html file into S3 bucket by CLI
+
+`aws s3 cp public/index.html s3://bartosz-tfc-bootcamp/index.html`
+
 ## Resources
 
 - [Gitpod tasks](https://www.gitpod.io/docs/configure/workspaces/tasks)
@@ -51,3 +55,4 @@ https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1
 - [Terraform CLI instalation guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - [Terraform modules ](https://registry.terraform.io/browse/modules)
 - [Terraform providers ](https://registry.terraform.io/browse/providers)
+- [Terraform Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
