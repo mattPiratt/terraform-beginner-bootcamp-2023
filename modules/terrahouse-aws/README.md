@@ -60,4 +60,3 @@ Terraform has variables. Can be declared in variables.tf. Can be ovverriten by
 - [Terraform modules ](https://registry.terraform.io/browse/modules)
 - [Terraform providers ](https://registry.terraform.io/browse/providers)
 - [Terraform Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
-- [Teraform Modules](https://developer.hashicorp.com/terraform/language/modules/sources)

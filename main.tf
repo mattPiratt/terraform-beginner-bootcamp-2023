@@ -4,12 +4,12 @@ resource "random_string" "bucket_name" {
   upper = false
 }
 
-resource "aws_s3_bucket" "website_bucket" {
-  bucket = var.BUCKET_NAME
-
-  tags = {
-    UserUuid = var.USER_UUID
-  }
+module "terrahouse-aws" {
+  source = "./modules/terrahouse-aws"
+  USER_UUID = var.USER_UUID
+  BUCKET_NAME = var.BUCKET_NAME
+  AWS_DEFAULT_REGION = var.AWS_DEFAULT_REGION
+  AWS_SECRET_ACCESS_KEY = var.AWS_SECRET_ACCESS_KEY
+  AWS_ACCESS_KEY_ID = var.AWS_ACCESS_KEY_ID
 }
-
 
