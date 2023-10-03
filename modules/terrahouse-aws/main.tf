@@ -26,4 +26,31 @@ resource "aws_s3_bucket" "website_bucket" {
   }
 }
 
+resource "aws_s3_bucket_website_configuration" "website_conf" {
+  bucket = aws_s3_bucket.website_bucket.bucket
+
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "error.html"
+  }
+}
+
+resource "aws_s3_object" "website_file_index" {
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "index.html"
+  source = var.FILE_index_html
+
+  etag = filemd5(var.FILE_index_html)
+}
+
+resource "aws_s3_object" "website_file_error" {
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "error.html"
+  source = var.FILE_error_html
+
+  etag = filemd5(var.FILE_error_html)
+}
 

@@ -13,3 +13,20 @@ variable "BUCKET_NAME" {
     type = string
 
 }
+
+variable "FILE_index_html" {
+  type = string
+
+  validation {
+    condition = fileexists(var.FILE_index_html)
+    error_message = "index.html file does not exist"
+  }
+}
+variable "FILE_error_html" {
+  type = string
+
+  validation {
+    condition = fileexists(var.FILE_error_html)
+    error_message = "error.html file does not exist"
+  }
+}

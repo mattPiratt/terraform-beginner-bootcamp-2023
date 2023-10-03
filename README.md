@@ -47,6 +47,10 @@ https://app.terraform.io/app/qbeckmansion/workspaces/terra-house-1
 Terraform has variables. Can be declared in variables.tf. Can be ovverriten by 
 `terraform -var name="value"`
 
+For modules, if there is new output that module should return, it shhould be defined
+- first in module outputs.tf
+- second, in root module outputs.tf
+
 
 ## Moving html file into S3 bucket by CLI
 
@@ -61,3 +65,5 @@ Terraform has variables. Can be declared in variables.tf. Can be ovverriten by
 - [Terraform providers ](https://registry.terraform.io/browse/providers)
 - [Terraform Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 - [Teraform Modules](https://developer.hashicorp.com/terraform/language/modules/sources)
+- [S3 website conf](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration)
+- [S3 object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object)

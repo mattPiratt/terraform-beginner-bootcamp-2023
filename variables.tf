@@ -8,3 +8,7 @@ variable "USER_UUID" {
 }
 variable "BUCKET_NAME" {
 }
+variable "FILE_index_html" {
+}
+variable "FILE_error_html" {
+}
