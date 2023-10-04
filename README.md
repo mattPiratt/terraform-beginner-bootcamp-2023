@@ -51,6 +51,14 @@ For modules, if there is new output that module should return, it shhould be def
 - first in module outputs.tf
 - second, in root module outputs.tf
 
+### Terraform AWS provider features
+
+There can be 
+* [data sources](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)
+* [S3 website conf](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration)
+* [S3 object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object)
+
+
 
 ## Moving html file into S3 bucket by CLI
 
@@ -67,3 +75,4 @@ For modules, if there is new output that module should return, it shhould be def
 - [Teraform Modules](https://developer.hashicorp.com/terraform/language/modules/sources)
 - [S3 website conf](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration)
 - [S3 object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object)
+- [Terraform Data sources](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)
