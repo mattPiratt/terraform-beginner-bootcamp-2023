@@ -12,3 +12,5 @@ variable "FILE_index_html" {
 }
 variable "FILE_error_html" {
 }
+variable "content_version" {
+}

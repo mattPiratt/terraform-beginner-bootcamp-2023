@@ -13,5 +13,6 @@ module "terrahouse-aws" {
   AWS_ACCESS_KEY_ID = var.AWS_ACCESS_KEY_ID
   FILE_index_html = var.FILE_index_html
   FILE_error_html = var.FILE_error_html
+  content_version = var.content_version
 }
 

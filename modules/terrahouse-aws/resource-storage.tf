@@ -18,11 +18,20 @@ resource "aws_s3_bucket_website_configuration" "website_conf" {
   }
 }
 
+resource "terraform_data" "content_version" {
+  input = var.content_version
+}
+
 resource "aws_s3_object" "website_file_index" {
   bucket = aws_s3_bucket.website_bucket.bucket
   key    = "index.html"
   source = var.FILE_index_html
   content_type = "text/html"
+
+  lifecycle {
+    replace_triggered_by = [terraform_data.content_version.output]
+    ignore_changes = [etag]
+  }
 
   etag = filemd5(var.FILE_index_html)
 }
@@ -32,6 +41,11 @@ resource "aws_s3_object" "website_file_error" {
   key    = "error.html"
   source = var.FILE_error_html
   content_type = "text/html"
+
+  lifecycle {
+    replace_triggered_by = [terraform_data.content_version.output]
+    ignore_changes = [etag]
+  }
 
   etag = filemd5(var.FILE_error_html)
 }

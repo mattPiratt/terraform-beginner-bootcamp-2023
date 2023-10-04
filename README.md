@@ -58,7 +58,16 @@ There can be
 * [S3 website conf](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration)
 * [S3 object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object)
 
+### Changing the Lifecycle of Resources
 
+[Meta Arguments Lifcycle](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)
+
+
+### Terraform Data
+
+Plain data values such as Local Values and Input Variables don't have any side-effects to plan against and so they aren't valid in replace_triggered_by. You can use terraform_data's behavior of planning an action each time input changes to indirectly use a plain value to trigger replacement.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data
 
 ## Moving html file into S3 bucket by CLI
 
