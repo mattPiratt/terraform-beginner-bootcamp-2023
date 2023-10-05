@@ -17,3 +17,7 @@ output "caller_arn" {
 output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
+
+output "cloudfront_url" {
+  value = aws_cloudfront_distribution.website_cf_distribution.domain_name
+}
