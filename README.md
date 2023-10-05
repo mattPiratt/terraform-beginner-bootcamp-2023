@@ -122,6 +122,26 @@ resource "aws_instance" "web" {
 ```
 https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec
 
+### using Terraform console
+
+And the command to list files
+```
+terraform console
+> fileset( "${path.root}/public/assets", "*")
+```
+
+## For Each Expressions
+
+For each allows us to enumerate over complex data types
+
+```sh
+[for s in var.list : upper(s)]
+```
+
+This is mostly useful when you are creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code.
+
+[For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
+
 ## Resources
 
 - [Gitpod tasks](https://www.gitpod.io/docs/configure/workspaces/tasks)

@@ -14,3 +14,5 @@ variable "FILE_error_html" {
 }
 variable "content_version" {
 }
+variable "assets_path" {
+}
