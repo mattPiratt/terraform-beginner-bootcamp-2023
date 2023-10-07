@@ -1,8 +1,7 @@
 tasks:
   - name: sinatra
     init: | 
-      cd $GITPOD_REPO_ROOT
-      cd terratowns_mock_servers
+      cd $GITPOD_REPO_ROOT/terratowns_mock_server
       bundle install
       bundle exec ruby server.rb 
   - name: terraform
