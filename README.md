@@ -10,6 +10,16 @@ gp env AWS_SECRET_ACCESS_KEY=whatever
 gp env AWS_DEFAULT_REGION=eu-central-1
 ```
 
+for this env vars to be recognized in Terraform peocessing, it is good to also add them  with "TF_VAR_" prefix:
+
+```
+gp env TF_VAR_AWS_ACCESS_KEY_ID=whatever
+gp env TF_VAR_AWS_SECRET_ACCESS_KEY=whatever
+gp env TF_VAR_AWS_DEFAULT_REGION=eu-central-1
+```
+
+After next time Gitpod will start the env, this Gitpod vars will be also available as normal env vars.
+
 And testing command is `aws sts get-caller-identity`
 
 ## Terraform basics
