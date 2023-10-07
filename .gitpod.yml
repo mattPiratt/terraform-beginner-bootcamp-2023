@@ -1,6 +1,13 @@
 tasks:
+  - name: sinatra
+    init: | 
+      cd $POOJECT_ROOT
+      cd terratowns_mock_servers
+      bundle install
+      bundle exec ruby server.rb 
   - name: terraform
     before: |
+      cd $POOJECT_ROOT
       sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
       wget -O- https://apt.releases.hashicorp.com/gpg | \
         gpg --dearmor | \
