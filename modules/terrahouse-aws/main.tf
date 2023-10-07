@@ -2,7 +2,7 @@ terraform {
   cloud {
     organization = "qbeckmansion"
     workspaces {
-      name = "terra-house-1"
+      name = "terraform-cloud"
     }
   }
 

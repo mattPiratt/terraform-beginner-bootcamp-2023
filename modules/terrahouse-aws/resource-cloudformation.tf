@@ -1,3 +1,4 @@
+/*
 locals {
   s3_origin_id = "myS3Origin"
 }
@@ -58,3 +59,5 @@ resource "aws_cloudfront_distribution" "website_cf_distribution" {
     cloudfront_default_certificate = true
   }
 }
+
+*/
