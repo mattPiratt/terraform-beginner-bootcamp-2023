@@ -158,6 +158,12 @@ This is mostly useful when you are creating multiples of a cloud resource and yo
 
 [For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
 
+## Terraform custom provider
+
+You can create custom provider to turn off all by writing a go application that will provide a set of CRUD operations. A good starting point is to use [scaffolding project](https://github.com/hashicorp/terraform-provider-scaffolding-framework) and/or goign through [this doc](https://www.hashicorp.com/blog/writing-custom-terraform-providers).
+The way it work, is that in TF we can create new *resource*, and when executing `terraform apply`, the provider will use Create Go-lang function, from the CRUD set. If we do a change in the *resource*, and then `terraform apply`, the Update opration will be executed.
+This CRUD operations can do anything. Eg call external RestAPI endpoint from our custom service.
+
 ## Resources
 
 - [Gitpod tasks](https://www.gitpod.io/docs/configure/workspaces/tasks)
