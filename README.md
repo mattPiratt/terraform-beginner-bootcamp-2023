@@ -79,6 +79,12 @@ Plain data values such as Local Values and Input Variables don't have any side-e
 
 https://developer.hashicorp.com/terraform/language/resources/terraform-data
 
+### Terraform Cloud
+
+In [Terraform Cloud](https://app.terraform.io/) we can have local or remote project run (plan or apply)
+For local, it means the entire run will happen localy on own machine (eg on Gitpod env, or in docker, or on own computer. For remote, it means thing will happen on TCloud. Then all env variables must be set in the TCoud as well.
+Separately we can connect TCloud to our repo, and given branch, and trigger TCloud run, when new code is pushed to branch. In this case, project should be in "remote" Execution Mode. 
+
 ## Moving html file into S3 bucket by CLI
 
 `aws s3 cp public/index.html s3://bartosz-tfc-bootcamp/index.html`

@@ -1,5 +1,5 @@
 output "random_bucket_name" {
-  value = random_string.bucket_name.id
+  value = module.random.random_bucket_name
 }
 output "bucket_name" {
   value = module.terrahouse-aws.bucket_name

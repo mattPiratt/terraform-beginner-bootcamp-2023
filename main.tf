@@ -1,9 +1,3 @@
-resource "random_string" "bucket_name" {
-  length = 32
-  special = false
-  upper = false
-}
-
 module "terrahouse-aws" {
   source = "./modules/terrahouse-aws"
   USER_UUID = var.USER_UUID
@@ -15,5 +9,9 @@ module "terrahouse-aws" {
   FILE_error_html = var.FILE_error_html
   content_version = var.content_version
   assets_path = var.assets_path
+}
+
+module "random" {
+  source = "./modules/random"
 }
 
