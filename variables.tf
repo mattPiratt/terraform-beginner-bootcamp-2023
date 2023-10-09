@@ -16,3 +16,7 @@ variable "content_version" {
 }
 variable "assets_path" {
 }
+variable "terratowns_endpoint" {
+}
+variable "TERRATOWNS_ACCESS_TOKEN" {
+}
