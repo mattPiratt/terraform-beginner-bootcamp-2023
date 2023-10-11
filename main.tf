@@ -37,7 +37,7 @@ never-ending battle of capes, makeup, and wild plans – all in a day's
 work for the Dark Knight!
 DESCRIPTION
   domain_name = module.terrahouse-aws-batman.cloudfront_url
-  town = "missingo"
+  town = "cooker-cove"
   content_version = var.darkknight.content_version
 }
 
@@ -50,6 +50,6 @@ to play (despite that old look graphics). This is my guide that will
 show you how to play arcanum without spoiling the plot.
 DESCRIPTION
   domain_name = module.terrahouse-aws-arcanum.cloudfront_url
-  town = "missingo"
+  town = "gamers-grotto"
   content_version = var.arcanum.content_version
 }
