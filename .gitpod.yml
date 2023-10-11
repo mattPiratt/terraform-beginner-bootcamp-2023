@@ -21,6 +21,7 @@ tasks:
       sudo apt-get install terraform
       cp $GITPOD_REPO_ROOT/terraform.tfvars.example $GITPOD_REPO_ROOT/terraform.tfvars
       source ./bin/generate-gitpod-tfcloud-credentials
+      source ./bin/build_provider
   - name: aws-cli
     env:
       AWS_CLI_AUTO_PROMPT: on-partial

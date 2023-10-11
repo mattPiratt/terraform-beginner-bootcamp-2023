@@ -3,7 +3,7 @@ locals {
 }
 
 resource "aws_cloudfront_origin_access_control" "website_cf_acl" {
-  name                              = "website_cf_acl"
+  name                              = "OAC ${aws_s3_bucket.website_bucket.bucket}"
   description                       = "Policy for CF Origin acl"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"

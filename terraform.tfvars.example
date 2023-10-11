@@ -1,8 +1,10 @@
 USER_UUID="d34256df-53a2-40e0-a48d-d07092bfeff3"
-BUCKET_NAME="exampro-bootcamp-website-bucket-created-by-terraform"
-TERRATOWNS_ACCESS_TOKEN="lalalalalalalalalal"
 terratowns_endpoint="https://terratowns.cloud/api"
-FILE_index_html="public/index.html"
-FILE_error_html="public/error.html"
-assets_path="public/assets/"
-content_version=4
+arcanum = {
+  public_path = "/workspace/terraform-beginner-bootcamp-2023/public/arcanum"
+  content_version = 2 
+}
+darkknight = {
+  public_path = "/workspace/terraform-beginner-bootcamp-2023/public/darkknight"
+  content_version = 1 
+}

@@ -6,17 +6,20 @@ variable "AWS_ACCESS_KEY_ID" {
 }
 variable "USER_UUID" {
 }
-variable "BUCKET_NAME" {
-}
-variable "FILE_index_html" {
-}
-variable "FILE_error_html" {
-}
-variable "content_version" {
-}
-variable "assets_path" {
-}
 variable "terratowns_endpoint" {
 }
 variable "TERRATOWNS_ACCESS_TOKEN" {
+}
+
+variable "arcanum" {
+  type = object({
+    public_path = string
+    content_version = number
+  })
+}
+variable "darkknight" {
+  type = object({
+    public_path = string
+    content_version = number
+  })
 }

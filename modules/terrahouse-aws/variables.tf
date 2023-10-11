@@ -14,21 +14,9 @@ variable "BUCKET_NAME" {
 
 }
 
-variable "FILE_index_html" {
-  type = string
-
-  validation {
-    condition = fileexists(var.FILE_index_html)
-    error_message = "index.html file does not exist"
-  }
-}
-variable "FILE_error_html" {
-  type = string
-
-  validation {
-    condition = fileexists(var.FILE_error_html)
-    error_message = "error.html file does not exist"
-  }
+variable "public_path" {
+  description = "The file path for the public directory"
+  type        = string
 }
 variable "content_version" {
   description = "The content version. Should be a positive integer starting at 1."
@@ -38,8 +26,4 @@ variable "content_version" {
     condition     = var.content_version > 0 && floor(var.content_version) == var.content_version
     error_message = "The content_version must be a positive integer starting at 1."
   }
-}
-variable "assets_path" {
-  description = "Path to assets folder"
-  type = string
 }
